@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--XML tree of game data-->
+<Cards>
+  <Playercards>
+    <Guiplayer>
+      <Card1>
+        <Value>Three</Value>
+        <Suit>Spades</Suit>
+      </Card1>
+      <Card2>
+        <Value>Ten</Value>
+        <Suit>Clubs</Suit>
+      </Card2>
+    </Guiplayer>
+    <Aiplayer>
+      <Card1>
+        <Value>Jack</Value>
+        <Suit>Clubs</Suit>
+      </Card1>
+      <Card2>
+        <Value>Three</Value>
+        <Suit>Clubs</Suit>
+      </Card2>
+    </Aiplayer>
+  </Playercards>
+</Cards>

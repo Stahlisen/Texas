@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--XML tree of game data-->
+<Games>
+  <Game Type="initial">
+    <Currentpot>600</Currentpot>
+    <Currentbet>81</Currentbet>
+    <Round>2</Round>
+    <Currentgive>starthand</Currentgive>
+    <Check>False</Check>
+    <Doneround>1</Doneround>
+  </Game>
+</Games>

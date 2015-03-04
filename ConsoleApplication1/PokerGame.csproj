@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{581E18AB-F545-4B75-A2AF-3748983480C2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication1</RootNamespace>
+    <AssemblyName>ConsoleApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AIengine.cs" />
+    <Compile Include="AIplayer.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="CardDeck.cs" />
+    <Compile Include="CardImage.cs" />
+    <Compile Include="Dealer.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Gameanalyzer.cs" />
+    <Compile Include="Gamecontrollercs.cs" />
+    <Compile Include="Gameloader.cs" />
+    <Compile Include="Gamewindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gamewindow.Designer.cs">
+      <DependentUpon>Gamewindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Guiplayer.cs" />
+    <Compile Include="IPlayer.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resulthand.cs" />
+    <Compile Include="Ruleengine.cs" />
+    <Compile Include="Startwindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Startwindow.Designer.cs">
+      <DependentUpon>Startwindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Statehandler.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Gamewindow.resx">
+      <DependentUpon>Gamewindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Startwindow.resx">
+      <DependentUpon>Startwindow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Resources\table-darkergreen-nologo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poker_table_environment.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS-JACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARD-BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\AceofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\AceofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\AceofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\AceofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\BackofCard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS-ACE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS-KING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\CLUBS-QUEEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS-ACE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS-JACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS-KING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\DIAMONDS-QUEEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\EightofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\EightofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\EightofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\EightofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\FiveofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\FiveofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\FiveofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\FiveofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\FourofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\FourofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\FourofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\FourofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS-ACE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS-JACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS-KING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\HEARTS-QUEEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\JackofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\JackofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\JackofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\JackofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\KingofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\KingofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\KingofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\KingofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\NineofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\NineofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\NineofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\NineofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\QueenofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\QueenofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\QueenofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\QueenofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SevenofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SevenofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SevenofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SevenofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SixofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SixofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SixofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SixofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADESACE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES-JACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES-KING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\SPADES-QUEEN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\TenofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\TenofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\TenofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\TenofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\ThreeofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\ThreeofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\ThreeofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\ThreeofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\TwoofClubs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\TwoofDiamonds.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\TwoofHearts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards\TwoofSpades.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\chips\black100.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

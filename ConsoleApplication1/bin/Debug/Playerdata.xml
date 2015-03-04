@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--XML tree of player data-->
+<Players>
+  <Player Type="Gui">
+    <Chips>1200</Chips>
+    <Name>Johannes</Name>
+    <MyTurn>true</MyTurn>
+    <Currentbet>0</Currentbet>
+  </Player>
+  <Player Type="Ai">
+    <Chips>1200</Chips>
+    <Name>AI</Name>
+    <MyTurn>false</MyTurn>
+    <Currentbet>200</Currentbet>
+  </Player>
+</Players>
